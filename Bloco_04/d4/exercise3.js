@@ -8,3 +8,7 @@ let info = {
 info['recorrente'] = 'Sim'
 
 console.table(info);
+
+for(let key in info) {
+    console.log(key)
+}
