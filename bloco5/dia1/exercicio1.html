@@ -39,19 +39,43 @@
       </div>
     </div>
     <script>
-        document.getElementsByTagName("p")[0].innerText = "Eu me vejo realizando meus sonhos a partir da programação !"
-        document.getElementsByTagName("div")[0].style.backgroundColor = "rgb(76,164,109)"
-        document.querySelectorAll(".main-content .center-content")[0].style.backgroundColor = "white"
-        document.querySelector("h1").innerText = "Exercício 5.1 - JavaScript"
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
- Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
+      function descricao(){
+        let mudancaDescricao = document.getElementsByTagName("p")[1];
+        mudancaDescricao.innerHTML = "Eu me vejo realizando meus sonhos a partir da programação !"
+      }
+      descricao()
+
+      function greenColor(){
+        let mudancaDeCor = document.getElementsByTagName("div")[0];
+        mudancaDeCor.style.background = "rgb(76,164,109)"
+      }
+      greenColor()
+
+      function whiteColor (){
+        let mudancaCor = document.querySelectorAll(".main-content .center-content")[0];
+        mudancaCor.style.backgroundColor = "white"
+      }
+      whiteColor()
+
+      function tagText () {
+        let mudancaTag = document.querySelector("h1");
+        mudancaTag.innerText = "Exercício 5.1 - JavaScript"
+      }
+      tagText()
+
+      function letraMaiusc () {
+        let maiusc = document.getElementsByTagName("p")[0];
+        maiusc.innerText = maiusc.innerText.toUpperCase ()
+      }
+      letraMaiusc()
+
+      function allTags () {
+        let tags = document.getElementsByTagName("p");
+          for(let index = 0; index < tags.length; index +=1){;
+          console.log(tags[index].innerHTML)
+          }
+      }
+      allTags()
     </script>
   </body>
 </html>
